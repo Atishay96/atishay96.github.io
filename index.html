@@ -4,7 +4,6 @@
   <title>Portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="Atishay Jain,atishay jain,atishay,jain,developer,Coder" />
   <meta name="description" content="Atishay jain is a Developer and coder who is passionate about these things and will love to do it as a profession."/>
   <meta name="author" content="Atishay Jain">
@@ -99,6 +98,9 @@
     		mouseleave: function(){
         		$(this).css("font-size", "100%");
     		}
+		});
+		$("#send").click(function(){
+			alert("Message Sent. Will reply you as soon as possible. :)");
 		});
   	});
 
@@ -203,10 +205,8 @@
 					<label for="reason">What's up?</label>
 					<textarea class="form-control" rows="5" id="reason" style="width:60%" placeholder="Message" data-error="What's up?" required></textarea>
 			</div>
-			<input class="btn btn-primary" type="submit" value="Send">
-			<script>
-				alert("Message Sent :)");
-			</script>
+			<input class="btn btn-primary" type="submit" id="send" value="Send">
+			
 			<input type="hidden" name="_next" value="http://atishayj.in/">
 		</form>
 	</div>
