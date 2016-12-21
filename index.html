@@ -4,12 +4,16 @@
   <title>Portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Atishay Jain,atishay jain,atishay,jain,developer,Coder" />
+  <meta name="description" content="Atishay jain is a Developer and coder who is passionate about these things and will love to do it as a profession."/>
+  <meta name="author" content="Atishay Jain">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-<!--Google Analytics-->   
+  <!--Google Analytics-->   
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -21,6 +25,10 @@
 
 	</script>
   <style>
+  .new
+  {
+  	font-size: 200%;
+  }
   body {
       font: 30px Montserrat, sans-serif;
       line-height: 1.8;
@@ -76,7 +84,25 @@
    		font-size: 200%;
    		list-style-type: none;
    }
+   .old
+   {
+   		font-size: 100%;
+   }
   </style>
+  <script>
+  	$(document).ready(function(){
+  		
+  		$("i , .links").on({
+   			mouseenter: function(){
+        		$(this).css("font-size", "200%");
+    		}, 
+    		mouseleave: function(){
+        		$(this).css("font-size", "100%");
+    		}
+		});
+  	});
+
+  </script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -178,6 +204,7 @@
 					<textarea class="form-control" rows="5" id="reason" style="width:60%" placeholder="Message"></textarea>
 			</div>
 			<input class="btn btn-primary" type="submit" value="Send">
+			<input type="hidden" name="_next" value="atishayj.in">
 		</form>
 	</div>
 	<footer class="container-fluid bg-4">
