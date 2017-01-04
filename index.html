@@ -86,10 +86,54 @@
    {
    		font-size: 100%;
    }
+   .slideanim {visibility:hidden;}
+  	.slide 
+  	{
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+    }
+  	@keyframes slide 
+  	{
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
   </style>
   <script>
   	$(document).ready(function(){
-  		$("#me").fadeIn(3000);
   		$("i , .links").on({
    			mouseenter: function(){
         		$(this).css("font-size", "200%");
@@ -136,7 +180,7 @@
 			<p style="text-align:center">Love to play with Technology.</p>
 			<p style="text-align:center">Got the right Attitude.</p>
 	</div>
-	<div id="lk" class="container-fluid bg-2">
+	<div id="lk" class="container-fluid bg-2 slideanim">
 		<h2>Resume &nbsp <small> <a href="resume.docx"> Click here to download</a></small></h2><hr/>
 		<h3> Technologies worked with in the past :</h3><br/>
 		<div class="container">
@@ -168,7 +212,7 @@
 					</ul>
 			</div>
 		</div><hr/>
-		<div class="jumbotron">
+		<div class="jumbotron slideanim">
 			<h2 style="color:#4286f4;">Links :</h2>
 			<div class="row text-center">
 				<div class="col-md-4">
@@ -186,7 +230,7 @@
 		
 	</div>
 	<br/>
-	<div id="contact" class="container bg-3">
+	<div id="contact" class="container bg-3 slideanim">
 		<h2 style="">Contact Details</h2>	
 		<form class="form-horizontal" action="https://formspree.io/jainatishay.j@gmail.com" method="POST" role="form" data-toggle="validator">
 			<div class="form-group">
@@ -209,6 +253,36 @@
 	<footer class="container-fluid bg-4">
 		<p>&copy copyrighted under section 246</p> 
 	</footer>
+	<script>
+	$(document).ready(function(){
+	 
+	  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+	    if (this.hash !== "") {
+	      event.preventDefault();
+
+	      var hash = this.hash;
+
+	      $('html, body').animate({
+	        scrollTop: $(hash).offset().top
+	      }, 900, function(){
+	   
+	        window.location.hash = hash;
+	      });
+	    } 
+	  });
+	  
+	  $(window).scroll(function() {
+	    $(".slideanim").each(function(){
+	      var pos = $(this).offset().top;
+
+	      var winTop = $(window).scrollTop();
+	        if (pos < winTop + 600) {
+	          $(this).addClass("slide");
+	        }
+	    });
+	  });
+	})
+	</script>
 	
 </body>
 </html>
