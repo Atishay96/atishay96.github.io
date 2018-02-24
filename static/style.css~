@@ -51,6 +51,10 @@ p {
     top: 0;
   }
 }
+
+.pointer{
+   cursor:pointer;
+}
 .color1{
    color:#ffe521
 }
