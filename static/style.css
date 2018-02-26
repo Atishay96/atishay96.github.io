@@ -23,7 +23,7 @@ p {
 
 .belowClose{
   height: 300px;
-  padding-bottom:0px;
+  margin-bottom: -15%;
 }
 
 .parallax-container {
@@ -32,9 +32,9 @@ p {
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+.parallax-container .section {
+  width: 100%;
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
