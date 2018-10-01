@@ -7,7 +7,8 @@
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
     $('.carousel').carousel({
-    	indicators	: true
+    	indicators : true,
+      numVisible: 9
     });
     $(".button-collapse").sideNav();
     $('.modal').modal();
