@@ -81,7 +81,9 @@ footer.page-footer {
   margin: 0;
 }
 .parallax-height{
-  height:50%
+  height:50%;
+  display: block;
+  min-height: 67vh;
 }
 .teal{
   background-color: black !important;
