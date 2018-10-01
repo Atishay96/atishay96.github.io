@@ -88,3 +88,6 @@ footer.page-footer {
 .teal{
   background-color: black !important;
 }
+#typed {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
