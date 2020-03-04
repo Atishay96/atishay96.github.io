@@ -15,15 +15,15 @@ p {
 }
 
 .button-toggle{
-  margin-top: 100px;
+  margin-top: 50px;
 }
-.colored{
-  font-size:500%;
+.colored {
+  font-size: 100px;
 }
 
 .belowClose{
-  height: 300px;
-  margin-bottom: -15%;
+  height: 200px;
+  margin-top: 5%;
 }
 
 .parallax-container {
@@ -90,4 +90,8 @@ footer.page-footer {
 }
 #typed {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.langs:hover {
+  font-size: 110px;
 }
